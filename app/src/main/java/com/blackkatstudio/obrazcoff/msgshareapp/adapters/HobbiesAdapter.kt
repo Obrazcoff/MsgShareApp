@@ -6,9 +6,9 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import com.blackkatstudio.obrazcoff.msgshareapp.models.Hobby
 import com.blackkatstudio.obrazcoff.msgshareapp.R
+import com.blackkatstudio.obrazcoff.msgshareapp.showToast
 import kotlinx.android.synthetic.main.list_item.view.*
 
 class HobbiesAdapter(val context: Context, private val hobbies: List<Hobby>) : RecyclerView.Adapter<HobbiesAdapter.MyViewHolder>() {
@@ -33,7 +33,7 @@ class HobbiesAdapter(val context: Context, private val hobbies: List<Hobby>) : R
 
         init {
             itemView.setOnClickListener {
-                Toast.makeText(context, currentHobby!!.title + " Clicked!!!", Toast.LENGTH_SHORT).show()
+                context.showToast(currentHobby!!.title + " Clicked!!!")
             }
 
             itemView.imgShare.setOnClickListener {
