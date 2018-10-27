@@ -3,6 +3,6 @@ package com.blackkatstudio.obrazcoff.msgshareapp
 import android.content.Context
 import android.widget.Toast
 
-fun Context.showToast(message: String){
-    Toast.makeText(this, message, Toast.LENGTH_LONG).show()
+fun Context.showToast(message: String, duration: Int = Toast.LENGTH_SHORT){
+    Toast.makeText(this, message, duration).show()
 }
