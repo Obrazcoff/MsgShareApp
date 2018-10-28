@@ -12,6 +12,10 @@ import com.blackkatstudio.obrazcoff.msgshareapp.showToast
 import kotlinx.android.synthetic.main.list_item.view.*
 
 class HobbiesAdapter(val context: Context, private val hobbies: List<Hobby>) : RecyclerView.Adapter<HobbiesAdapter.MyViewHolder>() {
+    companion object {
+        val TAG: String = HobbiesAdapter::class.java.simpleName
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.list_item, parent, false)
         return MyViewHolder(view)
@@ -33,7 +37,9 @@ class HobbiesAdapter(val context: Context, private val hobbies: List<Hobby>) : R
 
         init {
             itemView.setOnClickListener {
-                context.showToast(currentHobby!!.title + " Clicked!!!")
+                currentHobby?.let {
+                    context.showToast(currentHobby!!.title + " Clicked!!!")
+                }
             }
 
             itemView.imgShare.setOnClickListener {
@@ -50,7 +56,9 @@ class HobbiesAdapter(val context: Context, private val hobbies: List<Hobby>) : R
         }
 
         fun setData(hobby: Hobby?, pos: Int){
-            itemView.txvTitle.text = hobby!!.title
+            hobby?.let {
+                itemView.txvTitle.text = hobby.title
+            }
 
             this.currentHobby = hobby
             this.currentPosition = pos
