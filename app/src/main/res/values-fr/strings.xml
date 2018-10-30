@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="btn_show_toast">Afficher Toast</string>
-    <string name="btn_share_to_apps">Partager avec d'autres applications</string>
+    <string name="btn_share_to_apps">Partager avec d\'autres applications</string>
     <string name="et_enter_message">Entrez votre message</string>
-    <string name="btn_move_to_next_activity">Envoyer les données à l'activité suivante</string>
+    <string name="btn_move_to_next_activity">Envoyer les données à l\'activité suivante</string>
     <string name="btn_hobbies">Afficher les loisirs</string>
     <string name="btn_was_clicked">Le bouton a été cliqué!</string>
 </resources>
